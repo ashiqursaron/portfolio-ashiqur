@@ -1,0 +1,24 @@
+.kx-intro{position:fixed;inset:0;z-index:100;cursor:pointer;will-change:transform}
+.kx-intro__panel{position:absolute;inset:0;background:#EDE8DF;color:#0E0E0C;display:flex;align-items:center;justify-content:center}
+.kx-intro__hello{display:flex;align-items:center;gap:clamp(14px,2vw,28px);padding:0 24px}
+.kx-intro__dot{position:relative;flex:none;width:clamp(12px,1.3vw,18px);height:clamp(12px,1.3vw,18px);border-radius:50%;background:#FF5B1F}
+.kx-intro__dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:kx-intro-pulse 1.6s ease-out infinite}
+.kx-intro__word{font-family:'Bricolage Grotesque','Noto Sans Bengali',ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:clamp(48px,9.2vw,132px);line-height:1.15;letter-spacing:-.04em;animation:kx-intro-pop .22s cubic-bezier(.19,1,.22,1) both}
+.kx-intro__meta,.kx-intro__skip{position:absolute;bottom:36px;font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5E5A52}
+.kx-intro__meta--left{left:clamp(20px,3vw,40px)}
+.kx-intro__meta--right{right:clamp(20px,3vw,40px)}
+.kx-intro__skip{left:50%;transform:translateX(-50%);text-transform:none;letter-spacing:.02em;opacity:0;animation:kx-intro-fade .6s 1.2s ease forwards}
+.kx-intro__curve{position:absolute;left:-10%;right:-10%;top:calc(100% - 1px);height:0;background:#EDE8DF;border-radius:0 0 50% 50%/0 0 100% 100%}
+.kx-intro.is-leaving{animation:kx-intro-out 1.1s cubic-bezier(.76,0,.24,1) forwards;pointer-events:none}
+.kx-intro.is-leaving .kx-intro__curve{animation:kx-intro-curve 1.1s cubic-bezier(.76,0,.24,1) forwards}
+.kx-intro.is-leaving .kx-intro__hello{animation:kx-intro-lift 1.1s cubic-bezier(.76,0,.24,1) forwards}
+@keyframes kx-intro-out{to{transform:translateY(-100%)}}
+@keyframes kx-intro-curve{0%{height:0}50%{height:22vh}100%{height:0}}
+@keyframes kx-intro-lift{to{transform:translateY(-12vh);opacity:0}}
+@keyframes kx-intro-pop{from{opacity:0;transform:translateY(40%) scale(.96)}to{opacity:1;transform:none}}
+@keyframes kx-intro-pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(2);opacity:0}}
+@keyframes kx-intro-fade{to{opacity:1}}
+@media (max-width:600px){.kx-intro__meta--right{display:none}.kx-intro__skip{bottom:64px}}
+
+/* hold the hero's own entrance until the curtain starts to lift */
+.kx.kx--intro .kx-line>span,.kx.kx--intro .kx-hero__foot{animation-play-state:paused}
