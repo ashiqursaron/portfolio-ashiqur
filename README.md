@@ -1,109 +1,67 @@
-# Ashiqur Rahman Saron — Portfolio
+# Ashiqur Rahman Saron
 
-## The one rule
+**Computer Science researcher working across machine learning, computer vision, and language technology.**
 
-**Everything you see on the site lives in one file: `src/data/portfolio.js`.**
-You never need to touch any other file to change your content.
+I recently completed a BSc in Computer Science and Engineering at American International University-Bangladesh with a **4.00/4.00 CGPA**, ranking in the top 1% of my class. I am a Research Assistant with the Machine Learning Group at Qatar University and lead computer-vision and augmented-reality research at NEDAAS Lab.
 
-Open it in any text editor (VS Code is free and works well). It is organised in
-numbered sections with plain-English comments:
+I am especially interested in biomedical imaging, low-resource Bangla NLP, and assistive technology: practical machine learning that makes useful tools more accessible.
 
-| Section | What it controls |
-|---|---|
-| 1 · You | Name, email, location, photo, CV file, social links |
-| 2 · Site settings | Browser-tab title, Google description, your website address |
-| 3 · Homepage top | The big headline, intro sentence, spinning badge, "hello" screen, tool ribbon, statement paragraph |
-| 4 · Selected work | The sideways-scrolling project cards + the "Also on the bench" list |
-| 5 · Numbers | The four big counters |
-| 6 · Story | Education & experience timeline, research interests |
-| 7 · Publications | Your papers |
-| 8 · Recognition | Awards, certifications, referee quotes |
-| 9 · Contact form | Topics in the form, optional EmailJS keys |
+## Portfolio
 
-### Common jobs
+Explore my work, research, publications, experience, and contact details:
 
-**Add a paper** → in section 7, copy one `{ ... },` block, paste it where you
-want it, change the words. Order on the page = order in the file.
+**[ashiqursaron.netlify.app](https://ashiqursaron.netlify.app)**
 
-**Remove anything** → delete its whole `{ ... },` block (including the comma).
+## Selected work
 
-**Highlight words in orange** → wrap them in `*stars*` (headline, intro sentence,
-statement paragraph).
+- **BanglaSuicideBERT** — Compared BanglaBERT and XLM-RoBERTa for suicide-risk detection in Bangla social-media text; BanglaBERT achieved 96.21% accuracy. [Read the paper](https://ieeexplore.ieee.org/document/11429305).
+- **Image to Bangla text** — A vision-transformer pipeline that turns images into Bangla descriptions to support mobility for visually impaired people. [Read the paper](https://drive.google.com/file/d/1k4Ph2_uZ5576vbxJzjNwrjH-uCk5SwkS/view?usp=sharing).
+- **Able Sign** — An AI-driven, gesture-controlled robotics project. [View the source](https://github.com/ashiqursaron/Able_Sign).
+- **Rice Leaf Disease Detection** — A lightweight YOLOv8 model designed to run on Jetson Nano. [View the source](https://github.com/ashiqursaron/Rice_Leaf_Detection_YOLOv8).
 
-**Hide something** → set its text to `''`. For example `cv: ''` hides the
-Download CV button; `showClock: false` hides the live clock.
+The portfolio website includes more projects, publications, experience, awards, and certifications.
 
-**Add a project screenshot** → put the image in `public/projects/`
-(e.g. `dragon-news.png`), then in that project's block write
-`image: '/projects/dragon-news.png'`. Cards without an image look fine too.
+## Interests and tools
 
-**Change your photo** → replace `public/images/portrait.jpg` (square, face centred),
-or save a new file and update `photo:` in section 1.
+**Research:** Machine learning · Computer vision · Biomedical imaging · Bangla NLP · Assistive technology
 
-**Update your CV** → replace `public/Ashiqur_Rahman_Saron_CV.pdf` with the new file
-(keep the same name), or change `cv:` in section 1.
+**Tools:** Python · PyTorch · TensorFlow · Keras · OpenCV · Transformers · YOLOv8 · Hugging Face · NumPy · Pandas · C++ · MATLAB
 
-> If the page goes blank after an edit, a quote, comma or bracket was probably
-> deleted by accident. Undo (Ctrl/Cmd + Z) and retry. The terminal will also print
-> the exact line with the problem.
+## Connect
 
-## Run it on your computer
+- [LinkedIn](https://www.linkedin.com/in/ashiqur-saron)
+- [GitHub](https://github.com/ashiqursaron)
+- [Hugging Face](https://huggingface.co/ashiqurSaron)
+- [Email](mailto:ashiqursaron@gmail.com)
+- [Download my CV](public/Ashiqur_Rahman_Saron_CV.pdf)
 
-You need [Node.js](https://nodejs.org) (the LTS version) once.
+## Run the portfolio locally
+
+This site is built with React and Vite. You need [Node.js LTS](https://nodejs.org/).
 
 ```bash
-npm install     # first time only
-npm run dev     # opens a live preview — edits appear instantly
+npm install
+npm run dev
 ```
 
-## Put it online
+Vite prints a local URL in the terminal. Open it in your browser; edits are reflected as you save.
+
+To create and preview a production build:
 
 ```bash
-npm run build   # creates the finished site in the "dist" folder
+npm run build
+npm run preview
 ```
 
-Upload the `dist` folder to any static host. The easiest options:
+The production files are written to `dist/`. The live site is hosted on Netlify; the repository also includes an `npm run deploy` script for GitHub Pages.
 
-- **Firebase Hosting / Netlify / Vercel / Cloudflare Pages** — drag-and-drop or connect the repo; build command `npm run build`, publish folder `dist`.
-- **GitHub Pages** — `npm run deploy` (needs this folder to be a GitHub repo).
+## Updating the portfolio
 
-Once you know your address, put it in `site.url` (section 2), e.g.
-`'https://ashiqursaron.web.app'`, and rebuild. That switches on link previews
-(LinkedIn/WhatsApp/Slack show your card image) and the sitemap for Google.
+Most portfolio text and profile details are maintained in [`src/data/portfolio.js`](src/data/portfolio.js). It contains the profile, site metadata, homepage content, projects, timeline, publications, awards, certifications, and contact-form settings. Follow the examples and comments in that file when adding or editing entries.
 
-## Make the contact form send straight to your inbox (optional, free)
+- Replace the portrait at `public/images/portrait.jpg` or update the `photo` value.
+- Replace the CV at `public/Ashiqur_Rahman_Saron_CV.pdf` or update the `cv` value.
+- Add project images in `public/projects/` and use a root-relative path such as `/projects/example.png`.
+- Site metadata and search/social preview files are generated from `src/data/portfolio.js` during a build; do not edit generated metadata by hand.
 
-Until you do this, the form still works: pressing **Send note** opens the
-visitor's email app with the message ready to send to you.
-
-To get messages without an email app:
-
-1. Create a free account at [emailjs.com](https://www.emailjs.com).
-2. **Email Services** → add your Gmail → copy the **Service ID**.
-3. **Email Templates** → create a template that uses these variables:
-   `{{from_name}}`, `{{user_email}}`, `{{message}}` (set "Reply-To" to `{{user_email}}`)
-   → copy the **Template ID**.
-4. **Account** → copy your **Public Key**.
-5. Paste the three values into `contact.emailjs` in section 9. Done.
-
-(The public key is designed to be visible in a website — it is safe to commit.)
-
-## What changed from the original zip
-
-- **One data file** replaces the CMS and the many files that held text.
-- **Removed Sanity CMS** — it was connected to the previous owner's account, so your
-  site would have shown *his* content and you could not have edited it.
-- **Removed the previous owner's EmailJS keys** — the contact form would have
-  emailed *him*, not you.
-- **Removed the "classic" design** and the 3D/particle libraries — the new design is
-  now the only one. The site is now much lighter (≈ 82 KB of JavaScript, gzipped)
-  and far easier to maintain. The original zip still has it if you ever want it back.
-- New sections for **publications, awards, certifications and referees**.
-- Page title, Google/LinkedIn preview tags, favicon, share image, sitemap and
-  `robots.txt` are all generated from your data file.
-
-## Files you can ignore
-
-`public/site.webmanifest`, `public/robots.txt` and `public/sitemap.xml` are rewritten
-automatically on every build from `src/data/portfolio.js` — don't edit them by hand.
-Everything under `src/kinetic/` is the design itself.
+The interface and behavior live in `src/kinetic/`. Change those files when a request affects layout, styling, or interactions rather than just portfolio content. See [`.github/copilot-instructions.md`](.github/copilot-instructions.md) for project-specific guidance for future code changes.
