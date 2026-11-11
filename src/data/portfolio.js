@@ -55,7 +55,7 @@ export const site = {
   // Your website address once you know it, e.g. 'https://ashiqursaron.web.app'
   // (no slash at the end). Leave '' until then — the site works fine without it,
   // but link previews (LinkedIn/WhatsApp) and the sitemap need it.
-  url: '',
+  url: 'https://ashiqursaron.netlify.app',
 
   title: 'Ashiqur Rahman Saron — ML & Computer Vision Researcher',
   description:
