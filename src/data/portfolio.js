@@ -59,7 +59,7 @@ export const site = {
 
   title: 'Ashiqur Rahman Saron — ML & Computer Vision Researcher',
   description:
-    'Ashiqur Rahman Saron is a Computer Science graduate (4.00/4.00 CGPA) researching machine learning and computer vision — Bangla NLP, assistive AI and biomedical imaging. Research Assistant at Qatar University.',
+    'Ashiqur Rahman Saron is a Computer Science graduate (4.00/4.00 CGPA) researching machine learning and computer vision — Bangla NLP, assistive AI and biomedical imaging. Researcher at NEDAAS University.',
   keywords: ['Machine Learning', 'Computer Vision', 'Biomedical Imaging', 'Bangla NLP', 'Transformers', 'Deep Learning'],
   themeColor: '#0E0E0C',
 };
@@ -78,7 +78,7 @@ export const hero = {
 
   // *Starred* phrases get brightened and underlined.
   intro:
-    'Computer Science graduate (4.00/4.00 CGPA, top 1% of my class) researching *machine learning and computer vision* — from *Bangla language models* to *assistive AI*. Now a Research Assistant at Qatar University, and aiming for a Master’s in *biomedical imaging*.',
+    'Computer Science graduate (4.00/4.00 CGPA, top 1% of my class) researching *machine learning and computer vision* — from *Bangla language models* to *assistive AI*. Now a Researcher at NEDAAS Lab, and aiming for a Master’s in *Artificial Intelligence*.',
 
   // Text on the spinning circle. Any length works.
   badge: 'Open to MSc & research roles',
@@ -155,7 +155,7 @@ export const featured = [
   {
     // Orange highlight card (has "points", no "body")
     eyebrow: 'NEDAAS Lab · Team Lead · 2026 → now',
-    title: 'Heading toward biomedical imaging.',
+    title: 'Heading toward AI for ALL.',
     points: [
       'Leading computer-vision and AR research projects at NEDAAS Lab.',
       'Coordinating the team’s activities and publications.',
@@ -176,7 +176,7 @@ export const bench = [
 
 export const numbers = [
   ['__PAPERS__', '',  'research papers'],        // counted automatically below
-  ['4.00',       '/4.00', 'CGPA · top 1% of class'],
+  ['4.0',       '/4.0', 'CGPA · top 1% of class'],
   ['1',          '',  'Best Paper Award'],
   ['96.21',      '%', 'accuracy on Bangla suicide-risk detection'],
 ];
@@ -185,15 +185,15 @@ export const numbers = [
 /* 6 ─ STORY (education + experience, newest first) ───────────────── */
 
 export const timeline = [
-  {
-    when: 'Apr 2026 → now',
-    role: 'Research Assistant',
-    text: 'Qatar University Machine Learning Group, Doha. Conducting multimodal machine learning research under the supervision of Dr. Chowdhury.',
-  },
+  // {
+  //   when: 'Apr 2026 → now',
+  //   role: 'Research Assistant',
+  //   text: 'Qatar University Machine Learning Group, Doha. Conducting multimodal machine learning research under the supervision of Dr. Chowdhury.',
+  // },
   {
     when: 'Feb 2026 → now',
     role: 'Team Lead, Computer Vision & AR',
-    text: 'NEDAAS Lab, Dhaka. Leading CV and ML research aimed at biomedical imaging, and coordinating team activities and publications.',
+    text: 'NEDAAS Lab, Dhaka. Leading CV and ML research aimed at assistive technology & biomedical imaging, and coordinating team activities and publications.',
   },
   {
     when: 'Oct 2025 → Jan 2026',
